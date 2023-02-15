@@ -697,7 +697,6 @@
             <execution>
               <id>create-javadoc-jar</id>
               <goals>
-                <goal>javadoc-no-fork</goal>
                 <goal>jar</goal>
               </goals>
               <phase>package</phase>
