@@ -657,6 +657,7 @@
           <artifactId>apache-rat-plugin</artifactId>
           <configuration>
             <excludes>
+              <exclude>.mvn/.gradle-enterprise/gradle-enterprise-workspace-id</exclude>
               <exclude>site-content/**</exclude>
               <exclude>src/site/resources/.htaccess</exclude>
               <exclude>src/site/resources/download_lang.cgi</exclude>
