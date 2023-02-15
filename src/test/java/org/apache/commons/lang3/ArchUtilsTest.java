@@ -16,17 +16,18 @@
  */
 package org.apache.commons.lang3;
 
+import org.apache.commons.lang3.arch.Processor;
+import org.apache.commons.lang3.arch.Processor.Arch;
+import org.apache.commons.lang3.arch.Processor.Type;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.apache.commons.lang3.arch.Processor;
-import org.apache.commons.lang3.arch.Processor.Arch;
-import org.apache.commons.lang3.arch.Processor.Type;
-import org.junit.jupiter.api.Test;
 
 /**
  * Test class for {@link ArchUtils}.
@@ -119,6 +120,7 @@ public class ArchUtilsTest extends AbstractLangTest {
     }
 
     @Test
+    @EnabledOnOs(architectures = X86, disabledReason = "Test will fail when not run on X86.")
     public void testGetProcessor() {
         assertNotNull(ArchUtils.getProcessor(X86));
         assertNull(ArchUtils.getProcessor("NA"));
