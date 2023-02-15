@@ -587,6 +587,10 @@
   </distributionManagement>
 
   <properties>
+
+    <!-- todo temporary override until this is updated in the parent pom  -->
+    <commons.spdx.version>0.6.4</commons.spdx.version>
+
     <argLine>-Xmx512m</argLine>
     <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
